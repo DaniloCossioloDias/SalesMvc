@@ -1,0 +1,27 @@
+﻿@model List<SalesWebMvc.Models.Produto>
+
+<h1>Lista de Produtos</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Preço</th>
+            <th>Quantidade</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var produto in Model)
+        {
+            <tr>
+                <td>@produto.Id</td>
+                <td>@produto.Nome</td>
+                <td>@produto.Preco.ToString("C")</td>
+                <td>@produto.Quantidade</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a href="/Produtos/Create" class="btn btn-primary">Adicionar Produto</a>

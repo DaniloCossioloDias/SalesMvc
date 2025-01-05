@@ -1,0 +1,21 @@
+﻿@model SalesWebMvc.Models.Produto
+
+<h1>Adicionar Produto</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="Nome">Nome</label>
+        <input type="text" id="Nome" name="Nome" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label for="Preco">Preço</label>
+        <input type="number" id="Preco" name="Preco" class="form-control" step="0.01" />
+    </div>
+    <div class="form-group">
+        <label for="Quantidade">Quantidade</label>
+        <input type="number" id="Quantidade" name="Quantidade" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-success">Salvar</button>
+</form>
+
+<a href="/Produtos" class="btn btn-secondary">Voltar</a>
